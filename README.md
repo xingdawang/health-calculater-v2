@@ -3,6 +3,6 @@
 Calculate user body mass index (BMI) and body fat percentage (BFP) for healthcare.
 
 ### Toolset
-- [webpack]
-- [React]
-- [Redux]
+- webpack
+- React
+- Redux
