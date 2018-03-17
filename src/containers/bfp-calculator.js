@@ -1,14 +1,11 @@
 import React, { Component } from 'react'
 import HealthConditionForm from '../components/health-condition-form'
-import BMIIndicator from '../components/bmi-indicator'
+import BFPIndicator from '../components/bfp-indicator'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { calculateBMI } from '../actions/index'
+import { calculateBFP } from '../actions/index'
 
-
-class BMICalculator extends Component {
-
-
+class BFPCalculator extends Component {
 
 	handleSubmit = (values) => {
 		this.props.healthConditionCalc(values)
@@ -16,17 +13,16 @@ class BMICalculator extends Component {
 
 	render() {
 		if(!this.props.healthCondition) {
-			return(
+			return (
 				<HealthConditionForm
 					onSubmit = { this.handleSubmit }
 				/>
 			)
 		} else {
-			return(
-				<BMIIndicator />
+			return (
+				<BFPIndicator />
 			)
 		}
-		
 	}
 }
 
@@ -36,11 +32,13 @@ const mapStateToProps = (state) => {
 	}
 }
 
-const matchDispatchToProps = (dispatch)  => {
-	return bindActionCreators({healthConditionCalc: calculateBMI}, dispatch)
+
+
+const matchDispatchToProps = (dispatch) => {
+	return bindActionCreators({healthConditionCalc: calculateBFP}, dispatch)
 }
 
 export default connect(
 	mapStateToProps,
 	matchDispatchToProps
-)(BMICalculator)
+)(BFPCalculator)
