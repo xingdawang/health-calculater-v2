@@ -3,7 +3,7 @@ import HealthConditionForm from '../components/health-condition-form'
 import BMIIndicator from '../components/bmi-indicator'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { calculateHealth } from '../actions/index'
+import { calculateBMI } from '../actions/index'
 
 
 class BMICalculater extends Component {
@@ -37,7 +37,7 @@ const mapStateToProps = (state) => {
 }
 
 const matchDispatchToProps = (dispatch)  => {
-	return bindActionCreators({healthConditionCalc: calculateHealth}, dispatch)
+	return bindActionCreators({healthConditionCalc: calculateBMI}, dispatch)
 }
 
 export default connect(
