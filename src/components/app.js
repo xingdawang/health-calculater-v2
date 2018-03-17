@@ -1,15 +1,26 @@
 import React, { Component } from 'react';
+import Header from './header'
+import HomeContent from './home-content'
+import NotFound from './not-found'
+import BMICalculater from '../containers/bmi-calculator'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 class App extends Component {
+
   render() {
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <Header />
+        <div className = "container">
+          <Router>
+            <Switch>
+              <Route path = "/" exact component = { HomeContent } />
+              <Route path = "/bmi" component = { BMICalculater } />
+              <Route component = { NotFound } />
+            </Switch>
+          </Router>
+        </div>
       </div>
     );
   }

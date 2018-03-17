@@ -5,4 +5,7 @@ Calculate user body mass index (BMI) and body fat percentage (BFP) for healthcar
 ### Toolset
 - webpack
 - React
+- Router
 - Redux
+- Redux Form
+- Google Charts 
