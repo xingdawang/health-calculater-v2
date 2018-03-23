@@ -4,6 +4,7 @@ import HomeContent from './home-content'
 import NotFound from './not-found'
 import BMICalculator from '../containers/bmi-calculator'
 import BFPCalculator from '../containers/bfp-calculator'
+import Footer from './footer'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 class App extends Component {
@@ -23,6 +24,7 @@ class App extends Component {
             </Switch>
           </Router>
         </div>
+        <Footer />
       </div>
     );
   }

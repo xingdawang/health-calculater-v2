@@ -6,53 +6,66 @@ let HealthConditionForm = props => {
 	const { handleSubmit } = props
 
 	return (
-		<form onSubmit = { handleSubmit } >
-			{ window.location.pathname === '/bmi' ? '' :
+		<div className = "health-condition-form">
+			<form className="form-horizontal" onSubmit = { handleSubmit } >
+				{ window.location.pathname === '/bmi' ? '' :
+					<div className = "form-group">
+						<label className="col-sm-2 control-label">Date of Birth (MM/DD/YYYY): </label>
+						<div className="col-sm-10">
+							<Field
+								name = "dateOfBirth"
+								class = "form-control"
+								component = "input"
+								type = "date"
+								placeholder = "date"
+							/>
+						</div>
+					</div>
+				}
 				<div className = "form-group">
-					<label>Date of Birth (MM/DD/YYYY): </label>
-					<Field
-						name = "dateOfBirth"
-						component = "input"
-						type = "date"
-						placeholder = "date"
-					/>
-				</div>
-			}
-			<div className = "form-group">
-				<label>Height (cm): </label>
-				<Field
-					name = "height"
-					component = "input"
-					type = "number"
-					placeholder = "cm"
-				/>
-			</div>
-			<div className = "form-group">
-				<label>Weight (Kg): </label>
-				<Field
-					name = "weight"
-					component = "input"
-					type = "number"
-					placeholder = "Kg"
-				/>
-			</div>
-			{ window.location.pathname === '/bmi' ? '' :
-				<div className="form-group">
-					<label> Gender: </label>
-					<div>
-						<label>
-							<Field name = "gender" component = "input" type = "radio" value = "male" /> {' '} Male
-						</label>
-						<label>
-							<Field name = "gender" component = "input" type = "radio" value = "female" /> {' '} Female
-						</label>
+					<label className="col-sm-2 control-label">Height (cm): </label>
+					<div className="col-sm-10">
+						<Field
+							name = "height"
+							class = "form-control"
+							component = "input"
+							type = "number"
+							placeholder = "cm"
+						/>
 					</div>
 				</div>
-			}
-			<div className = "form-group">
-				<button type="submit" >Submit</button>
-			</div>
-		</form>
+				<div className = "form-group">
+					<label className="col-sm-2 control-label">Weight (Kg): </label>
+					<div className="col-sm-10">
+						<Field
+							name = "weight"
+							class = "form-control"
+							component = "input"
+							type = "number"
+							placeholder = "Kg"
+						/>
+					</div>
+				</div>
+				{ window.location.pathname === '/bmi' ? '' :
+					<div className="form-group">
+						<label className="col-sm-2 control-label"> Gender: </label>
+						<div className="col-sm-10">
+							<label className = "radio-inline">
+								<Field name = "gender" component = "input" type = "radio" value = "male" /> {' '} Male
+							</label>
+							<label className = "radio-inline">
+								<Field name = "gender" component = "input" type = "radio" value = "female" /> {' '} Female
+							</label>
+						</div>
+					</div>
+				}
+				<div className = "form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<button type="submit" className="btn btn-default">Submit</button>
+					</div>
+				</div>
+			</form>
+		</div>
 	)
 }
 

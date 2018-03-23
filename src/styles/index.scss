@@ -1,34 +1,19 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
+.health-condition-form {
+  border: 1px solid #ddd;
   padding: 20px;
-  color: white;
+  border-radius: 5px;
 }
 
-.App-title {
-  font-size: 1.5em;
-}
+.footer-list {
+  align-items: center;
+  display: flex;
+  list-style-type: disc;
 
-.App-intro {
-  font-size: large;
-}
+  & > li {
+    display: inline-block;
+  }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  & li + li {
+    margin-left: 15px;
+  }
 }
