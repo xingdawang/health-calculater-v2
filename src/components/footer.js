@@ -2,8 +2,13 @@ import React, { Component } from 'react'
 
 class Footer extends Component {
 
-	getCurrentYear = () =>
-		(new Date).getFullYear()
+	constructor(props) {
+		super(props)
+		this.getCurrentYear = this.getCurrentYear.bind(this)
+	}
+
+	getCurrentYear = () => 
+		(new Date()).getFullYear()
 
 
 	render() {

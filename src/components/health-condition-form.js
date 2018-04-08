@@ -14,7 +14,7 @@ let HealthConditionForm = props => {
 						<div className="col-sm-10">
 							<Field
 								name = "dateOfBirth"
-								class = "form-control"
+								className = "form-control"
 								component = "input"
 								type = "date"
 								placeholder = "date"
@@ -27,7 +27,7 @@ let HealthConditionForm = props => {
 					<div className="col-sm-10">
 						<Field
 							name = "height"
-							class = "form-control"
+							className = "form-control"
 							component = "input"
 							type = "number"
 							placeholder = "cm"
@@ -39,7 +39,7 @@ let HealthConditionForm = props => {
 					<div className="col-sm-10">
 						<Field
 							name = "weight"
-							class = "form-control"
+							className = "form-control"
 							component = "input"
 							type = "number"
 							placeholder = "Kg"
@@ -60,7 +60,7 @@ let HealthConditionForm = props => {
 					</div>
 				}
 				<div className = "form-group">
-					<div class="col-sm-offset-2 col-sm-10">
+					<div className="col-sm-offset-2 col-sm-10">
 						<button type="submit" className="btn btn-default">Submit</button>
 					</div>
 				</div>

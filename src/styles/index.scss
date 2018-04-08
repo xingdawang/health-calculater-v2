@@ -4,16 +4,37 @@
   border-radius: 5px;
 }
 
-.footer-list {
-  align-items: center;
-  display: flex;
-  list-style-type: disc;
+html {
+  position: relative;
+  min-height: 100%;
+}
 
-  & > li {
-    display: inline-block;
-  }
+root {
+  margin: 0 0 100px;
+  /* bottom = footer height */
+  padding: 25px;
+}
 
-  & li + li {
-    margin-left: 15px;
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  background-color: rgb(231, 231, 231);
+  text-align: center;
+  overflow: hidden;
+
+  .footer-list {
+    align-items: center;
+    display: flex;
+    list-style-type: disc;
+    justify-content: center;
+
+    & > li {
+      display: inline-block;
+    }
+
+    & li + li {
+      margin-left: 15px;
+    }
   }
 }
